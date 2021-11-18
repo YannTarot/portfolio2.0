@@ -1,0 +1,198 @@
+.project-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-1;
+  background: $light;
+  .swiper-container {
+    width: 100%;
+    height: 75vh;
+    transition: opacity .6s ease;
+    padding-top: 4rem;
+    .swiper-container-coverflow {
+      padding-top: 2%;
+    }
+
+    .swiper-slide {
+      background-color: rgba(68, 68, 68, 0.178);
+      background-blend-mode: multiply;
+      opacity: .9;
+      background-position: bottom;
+      background-size: cover;
+      height: 50vh !important;
+      box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
+      &:after {
+        content:"";
+        background-image: inherit;
+        background-position: bottom;
+        background-size: cover;
+        transform:  scaleY(-1);
+        width: inherit;
+        height:40%;
+        position: absolute;
+        bottom: -41%;
+        opacity: 0.4;
+      }
+      &:before {
+        z-index: 1;
+        content:"";
+        width: inherit;
+        height:42%;
+        position: absolute;
+        bottom: -42%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), $light);
+      }
+      &:hover {
+        transition: .8s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.900);
+        transform: scale(0.99);
+        .content .caption {
+          color: #fff;
+          transition: .8s ease-in-out;
+        }
+        .content .languages {
+          transition: .8s ease-in-out;
+          color: $primary;
+        }
+        .content .infos a {
+          text-decoration: none;
+          transition: .8s ease-in-out;
+          color: $light;
+          background: transparent;
+          border: none;
+        }
+      }
+      .slide1 {
+        background-image: url("../../assets/img/edgeangel.jpg");
+      }
+      .slide2 {
+        background-image: url("../../assets/img/danceattitude.png");
+      }
+      .slide3 {
+        background-image: url("../../assets/img/sportbuddies.png");;
+      }
+      .slide4 {
+        background-image: url("../../assets/img/mario.png");
+      }
+      .slide5 {
+        background-image: url("../../assets/img/flappybird.png");
+      }
+      .slide6 {
+        background-image: url("../../assets/img/sezanne.png");
+      }
+      .content {
+        transition: .8s ease-in-out;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding-left: 5%;
+        color: #fff;
+
+        .title-container {
+          height: 100px;
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .title {
+          font-size: 2.5em;
+          font-weight: bold;
+        }
+        .languages {
+          color: transparent;
+          word-spacing: 50px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .caption {
+          margin-top: 50px;
+          color: transparent;
+          display: block;
+          font-size: 15px;
+          line-height: 1.4;
+        }
+
+        .infos {
+          color: transparent;
+          background: transparent;
+          border: none;
+          margin-top: 5rem;
+          font-size: 1.2rem;
+          padding-right: 2rem;
+          &:hover {
+            transform: translateX(2px);
+          }
+          a {
+            color: transparent;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .project-container .swiper-container .swiper-slide .content .title {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width: 994px) {
+  .project-container .swiper-container .swiper-slide .content .title-container {
+    flex-direction: column;
+    height: 80px;
+  }
+  .project-container .swiper-container .swiper-slide .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-container .swiper-container .swiper-slide:hover .content .languages {
+    word-spacing: 10px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .project-container .swiper-container .swiper-slide .content .title {
+    font-size: 1.5rem;
+  }
+  .project-container .swiper-container .swiper-slide .content .infos {
+    margin-top: 3rem;
+  }
+  .project-container .swiper-container .swiper-slide:hover .content .caption {
+    margin-right: 5px;
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 580px) {
+  .swiper-container {
+    width: 95vw !important;
+  }
+  .project-container .swiper-container .swiper-slide .content {
+    position: relative;
+  }
+  .project-container .swiper-container .swiper-slide .content .infos {
+    position: absolute;
+    bottom: 60px;
+  }
+  .project-container .swiper-container .swiper-slide .content .video {
+    bottom: 100px;
+  }
+  .project-container .swiper-container .swiper-slide .content .title-container {
+    flex-direction: column;
+    height: 65px;
+  }
+  .project-container .swiper-container .swiper-slide:hover .content .caption {
+    margin-right: 5px;
+    font-size: 13px;
+  }
+  .project-container .swiper-container .swiper-slide:hover .content .languages {
+    word-spacing: 5px;
+  }
+}

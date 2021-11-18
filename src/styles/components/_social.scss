@@ -1,0 +1,28 @@
+.social-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 25px;
+  left: 0;
+  .social {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+    li a {
+      display: inline-block;
+      color: $dark;
+      font-size: 25px;
+      padding: 0 10px;
+      transition: .5s;
+
+      &:hover {
+        transform: translateY(-15px);
+      }
+    }
+  }
+}

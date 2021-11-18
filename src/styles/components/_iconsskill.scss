@@ -1,0 +1,120 @@
+.skillsContainer {
+  margin: 0 auto;
+  padding-top: 11rem;
+  width: 80vw;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .bounce {
+    margin: 1rem;
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation: fadeInDown 5s ease, bounce 2s ease-out infinite alternate, fadeInDown 5s ease;
+    // bounce 2s ease-out infinite alternate;
+  }
+  @keyframes fadeInDown {
+    from {
+      transform: scale(0);
+      transform: translateZ(-100%, 100%, 0);
+    }
+
+    to {
+      transform: scale(1);
+      transform: none;
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+}
+.a {
+  background: url("../../assets/icons/css.png");
+}
+.k {
+  background: url("../../assets/icons/html.png");
+}
+.c {
+  background: url("../../assets/icons/javascript.png");
+}
+.d {
+  background: url("../../assets/icons/react.png");
+}
+.e {
+  background: url("../../assets/icons/npm.png");
+}
+.f {
+  background: url("../../assets/icons/mongodb.png");
+}
+.g {
+  background: url("../../assets/icons/bootstrap.png");
+}
+.h {
+  background: url("../../assets/icons/framerjs.png");
+}
+.i {
+  background: url("../../assets/icons/github.png");
+}
+.j {
+  background: url("../../assets/icons/notion.png");
+}
+.b {
+  background: url("../../assets/icons/particles.png");
+}
+.l {
+  background: url("../../assets/icons/postgresql.png");
+}
+.m {
+  background: url("../../assets/icons/prismic.png");
+}
+.n {
+  background: url("../../assets/icons/ruby.png");
+}
+.o {
+  background: url("../../assets/icons/rails.png");
+}
+.p {
+  background: url("../../assets/icons/sass.png");
+}
+.q {
+  background: url("../../assets/icons/threejs.png");
+}
+.r {
+  background: url("../../assets/icons/wordpress.png");
+}
+.s {
+  background: url("../../assets/icons/swiper.png");
+}
+
+
+@media(max-width: 892px) {
+  .skillsContainer {
+    padding-top: 8rem;
+  }
+}
+
+
+@media(max-width: 580px) {
+  .skillsContainer {
+    padding-top: 7rem;
+  }
+}
