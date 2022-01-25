@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "main": "index.js",
   "engines": {
     "npm": "^8.3.2",
     "node": "^16.13.2"
